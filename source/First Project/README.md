@@ -9,4 +9,4 @@
 * Create a folder under “gRPCSoultion”. Name it as “protobuffer”. Under this folder we will create proto files, whose output would be required for Client and Server projects.
 * Uptil now this structure will look like this =>
 
-<image src='' />
+<image src='../../Image/gRPCFolderStructure.png' > Solution Structure</image>
