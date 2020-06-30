@@ -1,11 +1,12 @@
 # gRPC Setup Steps
 
 
-# Install VS-2019 Community Edition 
-# After you install it successfully, then launch VS-2019
-# Create blank sample solution, name it as “gRPCSolution”
-# Add a project by creating new project to it. Name this new project “Client”
-Add a project by creating new project to it. Name this new project “Server”
-# Create a folder under “gRPCSoultion”. Name it as “proto buffer”. Under this folder we will create proto files, whose output would be required for Client and Server projects.`
+* Install VS-2019 Community Edition (https://visualstudio.microsoft.com/vs/community/)
+* After you install it successfully, then launch VS-2019
+* Create blank sample solution, name it as â€œgRPCSolutionâ€
+* Add a .Net console project by creating new project. Name this new project â€œClientâ€
+* Add another .Net console project by creating new project. Name this new project â€œServerâ€
+* Create a folder under â€œgRPCSoultionâ€. Name it as â€œprotobufferâ€. Under this folder we will create proto files, whose output would be required for Client and Server projects.
+* Uptil now this structure will look like this =>
 
-
+<image src='' />
