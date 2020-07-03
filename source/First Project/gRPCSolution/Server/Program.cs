@@ -28,6 +28,7 @@ namespace GrpcServer
 
                 server.Start();
                 Console.WriteLine($"The server is actively listening on port {serverPort}...");
+                Console.ReadKey();
             }
             catch (IOException ex)
             {
@@ -37,7 +38,6 @@ namespace GrpcServer
             {
                 server?.ShutdownAsync().Wait();
             }
-            Console.ReadKey();
         }
     }
 }
