@@ -25,7 +25,6 @@ namespace GrpcClient
                 }
             });
 
-            var client = new Sample.SampleService.SampleServiceClient(channel);
             channel.ShutdownAsync().Wait();
             Console.ReadKey();
         }
