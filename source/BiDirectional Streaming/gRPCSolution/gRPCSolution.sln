@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protobuffer", "protobuffer", "{D68E1DAC-4DC3-49CB-8033-7EFF6A230070}"
 	ProjectSection(SolutionItems) = preProject
-		sample.proto = sample.proto
+		SearchMax.proto = SearchMax.proto
 	EndProjectSection
 EndProject
 Global

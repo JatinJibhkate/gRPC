@@ -1,0 +1,16 @@
+syntax = "proto3";
+package SearchMax;
+
+message NumberData {
+	int32 Number = 1;
+}
+
+message Request {
+	NumberData Argument = 1;
+}
+message Response {
+	NumberData Result = 1;
+}
+service SearchMaxService {
+	rpc SearchMaxNumber (stream Request) returns (stream Response) {}
+}

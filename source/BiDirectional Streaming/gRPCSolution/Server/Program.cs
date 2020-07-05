@@ -1,4 +1,6 @@
 ﻿using Grpc.Core;
+using Grpc.Server;
+using SearchMax;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,11 +25,13 @@ namespace GrpcServer
                 //meaningful entity
                 server = new Server
                 {
+                    Services = { SearchMaxService.BindService(new SearchMaxServiceEx()) },
                     Ports = { new ServerPort("localhost", serverPort, ServerCredentials.Insecure) }
                 };
 
                 server.Start();
                 Console.WriteLine($"The server is actively listening on port {serverPort}...");
+                Console.ReadKey();
             }
             catch (IOException ex)
             {
@@ -37,7 +41,6 @@ namespace GrpcServer
             {
                 server?.ShutdownAsync().Wait();
             }
-            Console.ReadKey();
         }
     }
 }
