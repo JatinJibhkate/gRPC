@@ -25,17 +25,17 @@ namespace ComputeAverage {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRjb21wdXRlYXZlcmFnZS5wcm90bxIOQ29tcHV0ZUF2ZXJhZ2UiHAoKTnVt",
-            "YmVyRGF0YRIOCgZOdW1iZXIYASABKAUiPQoNUmVxdWVzdFN0cmVhbRIsCghB",
-            "cmd1bWVudBgBIAEoCzIaLkNvbXB1dGVBdmVyYWdlLk51bWJlckRhdGEiNgoI",
-            "UmVzcG9uc2USKgoGUmVzdWx0GAEgASgLMhouQ29tcHV0ZUF2ZXJhZ2UuTnVt",
-            "YmVyRGF0YTJxChVDb21wdXRlQXZlcmFnZVNlcnZpY2USWAoZQ29tcHV0ZUF2",
-            "ZXJhZ2VDYWxjdWxhdGlvbhIdLkNvbXB1dGVBdmVyYWdlLlJlcXVlc3RTdHJl",
-            "YW0aGC5Db21wdXRlQXZlcmFnZS5SZXNwb25zZSIAKAFiBnByb3RvMw=="));
+            "YmVyRGF0YRIOCgZOdW1iZXIYASABKAUiNwoHUmVxdWVzdBIsCghBcmd1bWVu",
+            "dBgBIAEoCzIaLkNvbXB1dGVBdmVyYWdlLk51bWJlckRhdGEiNgoIUmVzcG9u",
+            "c2USKgoGUmVzdWx0GAEgASgLMhouQ29tcHV0ZUF2ZXJhZ2UuTnVtYmVyRGF0",
+            "YTJrChVDb21wdXRlQXZlcmFnZVNlcnZpY2USUgoZQ29tcHV0ZUF2ZXJhZ2VD",
+            "YWxjdWxhdGlvbhIXLkNvbXB1dGVBdmVyYWdlLlJlcXVlc3QaGC5Db21wdXRl",
+            "QXZlcmFnZS5SZXNwb25zZSIAKAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::ComputeAverage.NumberData), global::ComputeAverage.NumberData.Parser, new[]{ "Number" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ComputeAverage.RequestStream), global::ComputeAverage.RequestStream.Parser, new[]{ "Argument" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ComputeAverage.Request), global::ComputeAverage.Request.Parser, new[]{ "Argument" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ComputeAverage.Response), global::ComputeAverage.Response.Parser, new[]{ "Result" }, null, null, null, null)
           }));
     }
@@ -172,11 +172,11 @@ namespace ComputeAverage {
 
   }
 
-  public sealed partial class RequestStream : pb::IMessage<RequestStream> {
-    private static readonly pb::MessageParser<RequestStream> _parser = new pb::MessageParser<RequestStream>(() => new RequestStream());
+  public sealed partial class Request : pb::IMessage<Request> {
+    private static readonly pb::MessageParser<Request> _parser = new pb::MessageParser<Request>(() => new Request());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RequestStream> Parser { get { return _parser; } }
+    public static pb::MessageParser<Request> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -189,21 +189,21 @@ namespace ComputeAverage {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStream() {
+    public Request() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStream(RequestStream other) : this() {
+    public Request(Request other) : this() {
       argument_ = other.argument_ != null ? other.argument_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RequestStream Clone() {
-      return new RequestStream(this);
+    public Request Clone() {
+      return new Request(this);
     }
 
     /// <summary>Field number for the "Argument" field.</summary>
@@ -219,11 +219,11 @@ namespace ComputeAverage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as RequestStream);
+      return Equals(other as Request);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RequestStream other) {
+    public bool Equals(Request other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -273,7 +273,7 @@ namespace ComputeAverage {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RequestStream other) {
+    public void MergeFrom(Request other) {
       if (other == null) {
         return;
       }

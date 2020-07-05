@@ -12,14 +12,14 @@ namespace ComputeAverage {
   {
     static readonly string __ServiceName = "ComputeAverage.ComputeAverageService";
 
-    static readonly grpc::Marshaller<global::ComputeAverage.RequestStream> __Marshaller_ComputeAverage_RequestStream = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ComputeAverage.RequestStream.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::ComputeAverage.Request> __Marshaller_ComputeAverage_Request = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ComputeAverage.Request.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::ComputeAverage.Response> __Marshaller_ComputeAverage_Response = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ComputeAverage.Response.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::ComputeAverage.RequestStream, global::ComputeAverage.Response> __Method_ComputeAverageCalculation = new grpc::Method<global::ComputeAverage.RequestStream, global::ComputeAverage.Response>(
+    static readonly grpc::Method<global::ComputeAverage.Request, global::ComputeAverage.Response> __Method_ComputeAverageCalculation = new grpc::Method<global::ComputeAverage.Request, global::ComputeAverage.Response>(
         grpc::MethodType.ClientStreaming,
         __ServiceName,
         "ComputeAverageCalculation",
-        __Marshaller_ComputeAverage_RequestStream,
+        __Marshaller_ComputeAverage_Request,
         __Marshaller_ComputeAverage_Response);
 
     /// <summary>Service descriptor</summary>
@@ -32,7 +32,7 @@ namespace ComputeAverage {
     [grpc::BindServiceMethod(typeof(ComputeAverageService), "BindService")]
     public abstract partial class ComputeAverageServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::ComputeAverage.Response> ComputeAverageCalculation(grpc::IAsyncStreamReader<global::ComputeAverage.RequestStream> requestStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::ComputeAverage.Response> ComputeAverageCalculation(grpc::IAsyncStreamReader<global::ComputeAverage.Request> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -62,11 +62,11 @@ namespace ComputeAverage {
       {
       }
 
-      public virtual grpc::AsyncClientStreamingCall<global::ComputeAverage.RequestStream, global::ComputeAverage.Response> ComputeAverageCalculation(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncClientStreamingCall<global::ComputeAverage.Request, global::ComputeAverage.Response> ComputeAverageCalculation(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ComputeAverageCalculation(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncClientStreamingCall<global::ComputeAverage.RequestStream, global::ComputeAverage.Response> ComputeAverageCalculation(grpc::CallOptions options)
+      public virtual grpc::AsyncClientStreamingCall<global::ComputeAverage.Request, global::ComputeAverage.Response> ComputeAverageCalculation(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_ComputeAverageCalculation, null, options);
       }
@@ -91,7 +91,7 @@ namespace ComputeAverage {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ComputeAverageServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_ComputeAverageCalculation, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::ComputeAverage.RequestStream, global::ComputeAverage.Response>(serviceImpl.ComputeAverageCalculation));
+      serviceBinder.AddMethod(__Method_ComputeAverageCalculation, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::ComputeAverage.Request, global::ComputeAverage.Response>(serviceImpl.ComputeAverageCalculation));
     }
 
   }

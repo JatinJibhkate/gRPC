@@ -6,7 +6,7 @@ message NumberData {
 	int32 Number = 1;
 }
 
-message RequestStream {
+message Request {
 	NumberData Argument = 1;
 }
 
@@ -15,5 +15,5 @@ message Response {
 }
 
 service ComputeAverageService {
-	rpc ComputeAverageCalculation (stream RequestStream) returns (Response) {}
+	rpc ComputeAverageCalculation (stream Request) returns (Response) {}
 }
