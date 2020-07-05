@@ -42,7 +42,7 @@ namespace GrpcClient
 
             Console.WriteLine($"Prime number decomposition for number { inputNumber } = { builder.ToString().TrimEnd('*') }");
 
-            channel.ShutdownAsync().Wait();
+            await channel.ShutdownAsync();
             Console.ReadKey();
         }
     }
